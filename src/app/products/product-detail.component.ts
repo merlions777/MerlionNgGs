@@ -13,7 +13,6 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {
     let id: number = +this._route.snapshot.paramMap.get('id');
-    this.pageTitle += `: ${id}`;
     this.product = {
       productId: 1,
       productName: 'Leaf Rake',

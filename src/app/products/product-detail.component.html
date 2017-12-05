@@ -3,6 +3,49 @@
     {{pageTitle + ':' + product.productName}}
   </div>
   <div>
+    <table class='table'>
+      <tr>
+        <td>
+          <table class='table'>
+            <tr>
+              <td>Name:</td>
+              <td>{{product.productName}}</td>
+            </tr>
+            <tr>
+              <td>Code:</td>
+              <td>{{product.productCode}}</td>
+            </tr>
+            <tr>
+              <td>Description:</td>
+              <td>{{product.description}}</td>
+            </tr>
+            <tr>
+              <td>Availablility:</td>
+              <td>{{product.releaseDate}}</td>
+            </tr>
+            <tr>
+              <td>Price:</td>
+              <td>{{product.price | currency:'USD':true:'1.2-2'}}</td>
+            </tr>
+            <tr>
+              <td>5 Star Rating:</td>
+              <td>
+                <pm-star [rating]='product.starRating'>
+                </pm-star>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <img [src]='product.imageUrl' [title]='product.productName' [style.width.px]=100 [style.margin.px]=10/>
+        </td>
+      </tr>
+
+
+    </table>
+
+  </div>
+  <div>
     <a class='btn btn-default' (click)='onBack()' style='width:80px'>
       <i class='glyphicon glyphicon-chevron-left'></i> Back
     </a>
